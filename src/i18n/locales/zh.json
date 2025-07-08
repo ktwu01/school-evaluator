@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "title": "学校评估器 - 这所学校值得上吗？",
+    "description": "比较学校录取通知书，根据各种因素评估一所学校是否值得就读。"
+  },
+  "schoolEvaluator": {
+    "title": "学校录取评估器",
+    "description": "输入最多两份学校录取通知书的详细信息，进行比较并确定哪个更适合您。",
+    "schoolName": "学校名称",
+    "tuition": "每年学费（美元）",
+    "scholarship": "每年奖学金（美元）",
+    "livingCost": "每年生活费（美元）",
+    "programLength": "项目时长（年）",
+    "postGradSalary": "预期毕业后薪资（美元/年）",
+    "reputation": "学校声誉（1-10）",
+    "location": "地理位置偏好（1-10）",
+    "programFit": "项目匹配度（1-10）",
+    "calculate": "计算比较结果",
+    "netCost": "净成本",
+    "estimatedROI": "预估投资回报率（5年）",
+    "weightedScore": "加权分数",
+    "school1": "学校1",
+    "school2": "学校2",
+    "comparisonResults": "比较结果"
+  }
+}

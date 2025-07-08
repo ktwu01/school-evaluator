@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "title": "School Evaluator - Is this school worth it?",
+    "description": "Compare school offers and evaluate if a school is worth attending based on various factors."
+  },
+  "schoolEvaluator": {
+    "title": "School Offer Evaluator",
+    "description": "Enter details for up to two school offers to compare them and determine which is a better fit for you.",
+    "schoolName": "School Name",
+    "tuition": "Annual Tuition (USD)",
+    "scholarship": "Annual Scholarship (USD)",
+    "livingCost": "Annual Living Cost (USD)",
+    "programLength": "Program Length (Years)",
+    "postGradSalary": "Expected Post-Graduation Salary (USD/Year)",
+    "reputation": "School Reputation (1-10)",
+    "location": "Location Preference (1-10)",
+    "programFit": "Program Fit (1-10)",
+    "calculate": "Calculate Comparison",
+    "netCost": "Net Cost",
+    "estimatedROI": "Estimated ROI (5 years)",
+    "weightedScore": "Weighted Score",
+    "school1": "School 1",
+    "school2": "School 2",
+    "comparisonResults": "Comparison Results"
+  }
+}
