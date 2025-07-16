@@ -3,24 +3,17 @@ import { getRequestConfig } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { locales } from "./config";
 
-export default getRequestConfig(async ({ locale }: { locale?: string }) => {
-  // Use default locale if locale is invalid or undefined
-  const validLocale =
-    locale && locales.includes(locale as (typeof locales)[number])
-      ? locale
-      : "zh"; // default locale
+export default getRequestConfig(async ({ requestLocale }) => {
+  // This typically corresponds to the `[locale]` segment
+  let locale = await requestLocale;
 
-  try {
-    return {
-      locale: validLocale,
-      messages: (await import(`./locales/${validLocale}.json`)).default,
-    };
-  } catch (error) {
-    console.error("Error loading locale messages:", error);
-    // Fallback to Chinese locale
-    return {
-      locale: "zh",
-      messages: (await import(`./locales/zh.json`)).default,
-    };
+  // Ensure that the incoming locale is valid
+  if (!locale || !locales.includes(locale as (typeof locales)[number])) {
+    locale = "en"; // default locale
   }
+
+  return {
+    locale,
+    messages: (await import(`./locales/${locale}.json`)).default,
+  };
 });

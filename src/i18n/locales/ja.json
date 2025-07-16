@@ -1,0 +1,31 @@
+{
+  "app": {
+    "titleTemplate": "%s | 学校評価ツール",
+    "defaultTitle": "学校評価ツール - この学校に通う価値はありますか？",
+    "description": "学校のオファーを比較し、さまざまな要因に基づいて学校に通う価値があるかどうかを評価します。"
+  },
+  "metadata": {
+    "title": "学校評価ツール - この学校に通う価値はありますか？",
+    "description": "学校のオファーを比較し、さまざまな要因に基づいて学校に通う価値があるかどうかを評価します。"
+  },
+  "schoolEvaluator": {
+    "title": "学校オファー評価ツール",
+    "description": "最大2つの学校オファーの詳細を入力して比較し、どちらがあなたにより適しているかを判断します。",
+    "schoolName": "学校名",
+    "tuition": "年間授業料（USD）",
+    "scholarship": "年間奨学金（USD）",
+    "livingCost": "年間生活費（USD）",
+    "programLength": "プログラム期間（年）",
+    "postGradSalary": "卒業後予想給与（USD/年）",
+    "reputation": "学校の評判（1-10）",
+    "location": "立地の好み（1-10）",
+    "programFit": "プログラムの適合性（1-10）",
+    "calculate": "比較を計算",
+    "netCost": "正味コスト",
+    "estimatedROI": "推定ROI（5年）",
+    "weightedScore": "重み付けスコア",
+    "school1": "学校1",
+    "school2": "学校2",
+    "comparisonResults": "比較結果"
+  }
+} 

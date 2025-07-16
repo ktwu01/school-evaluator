@@ -1,4 +1,9 @@
 {
+  "app": {
+    "titleTemplate": "%s | School Evaluator",
+    "defaultTitle": "School Evaluator - Is this school worth it?",
+    "description": "Compare school offers and evaluate if a school is worth attending based on various factors."
+  },
   "metadata": {
     "title": "School Evaluator - Is this school worth it?",
     "description": "Compare school offers and evaluate if a school is worth attending based on various factors."

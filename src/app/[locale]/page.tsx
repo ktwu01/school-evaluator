@@ -1,4 +1,4 @@
-import { getDictionary } from "@/i18n/request";
+import { getTranslations } from "next-intl/server";
 import { Locale } from "@/i18n/config";
 import SchoolEvaluator from "@/components/SchoolEvaluator";
 
@@ -7,11 +7,11 @@ export default async function Home({
 }: { 
   params: { locale: Locale };
 }) {
-  const dictionary = await getDictionary(locale);
+  const t = await getTranslations({ locale, namespace: "schoolEvaluator" });
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <SchoolEvaluator dictionary={dictionary} />
+      <SchoolEvaluator t={t} />
     </main>
   );
 }

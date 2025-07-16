@@ -1,17 +1,17 @@
 import React from "react";
 
 interface SchoolEvaluatorProps {
-  dictionary: any; // Type this more specifically later
+  t: (key: string) => string; // Translation function
 }
 
-const SchoolEvaluator: React.FC<SchoolEvaluatorProps> = ({ dictionary }) => {
+const SchoolEvaluator: React.FC<SchoolEvaluatorProps> = ({ t }) => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">
-        {dictionary.schoolEvaluator.title}
+        {t('title')}
       </h1>
       <p className="text-center mb-8">
-        {dictionary.schoolEvaluator.description}
+        {t('description')}
       </p>
 
       {/* Placeholder for school input forms */}

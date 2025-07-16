@@ -1,0 +1,31 @@
+{
+  "app": {
+    "titleTemplate": "%s | Evaluador de Escuelas",
+    "defaultTitle": "Evaluador de Escuelas - ¿Vale la pena asistir a esta escuela?",
+    "description": "Compara ofertas de escuelas y evalúa si vale la pena asistir a una escuela basándose en varios factores."
+  },
+  "metadata": {
+    "title": "Evaluador de Escuelas - ¿Vale la pena asistir a esta escuela?",
+    "description": "Compara ofertas de escuelas y evalúa si vale la pena asistir a una escuela basándose en varios factores."
+  },
+  "schoolEvaluator": {
+    "title": "Evaluador de Ofertas Escolares",
+    "description": "Ingresa los detalles de hasta dos ofertas escolares para compararlas y determinar cuál es mejor para ti.",
+    "schoolName": "Nombre de la Escuela",
+    "tuition": "Colegiatura Anual (USD)",
+    "scholarship": "Beca Anual (USD)",
+    "livingCost": "Costo de Vida Anual (USD)",
+    "programLength": "Duración del Programa (Años)",
+    "postGradSalary": "Salario Esperado Post-Graduación (USD/Año)",
+    "reputation": "Reputación de la Escuela (1-10)",
+    "location": "Preferencia de Ubicación (1-10)",
+    "programFit": "Ajuste del Programa (1-10)",
+    "calculate": "Calcular Comparación",
+    "netCost": "Costo Neto",
+    "estimatedROI": "ROI Estimado (5 años)",
+    "weightedScore": "Puntuación Ponderada",
+    "school1": "Escuela 1",
+    "school2": "Escuela 2",
+    "comparisonResults": "Resultados de Comparación"
+  }
+} 

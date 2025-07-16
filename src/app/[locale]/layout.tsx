@@ -1,37 +1,59 @@
-import type { Metadata } from "next";
+// src/app/[locale]/layout.tsx
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
 import { Inter } from "next/font/google";
-import "../globals.css";
-import { i18n, type Locale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/request";
+import { locales, defaultLocale } from "@/i18n/config";
+import ClientBody from "../ClientBody";
+import "./globals.css";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ locale }));
-}
-
 export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: Locale };
-}): Promise<Metadata> {
-  const dictionary = await getDictionary(locale);
+  params,
+}: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+
+  const t = await getTranslations({ locale, namespace: "app" });
+
   return {
-    title: dictionary.metadata.title,
-    description: dictionary.metadata.description,
+    title: {
+      template: t("titleTemplate"),
+      default: t("defaultTitle"),
+    },
+    description: t("description"),
   };
 }
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale },
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-  params: { locale: Locale };
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const validLocale = locales.includes(locale as (typeof locales)[number])
+    ? locale
+    : defaultLocale;
+
+  let messages;
+  try {
+    messages = (await import(`@/i18n/locales/${validLocale}.json`)).default;
+  } catch (error) {
+    // Fallback to default locale messages
+    messages = (await import(`@/i18n/locales/${defaultLocale}.json`)).default;
+  }
+
   return (
-    <html lang={locale}>
-      <body className={inter.className}>{children}</body>
+    <html lang={validLocale} suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
+        <NextIntlClientProvider locale={validLocale} messages={messages}>
+          <ClientBody>{children}</ClientBody>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

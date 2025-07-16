@@ -1,24 +1,29 @@
 {
+  "app": {
+    "titleTemplate": "%s | 学校评估器",
+    "defaultTitle": "学校评估器 - 这个学校值得上吗？",
+    "description": "比较学校录取通知书，评估一所学校是否值得就读，基于各种因素进行分析。"
+  },
   "metadata": {
-    "title": "学校评估器 - 这所学校值得上吗？",
-    "description": "比较学校录取通知书，根据各种因素评估一所学校是否值得就读。"
+    "title": "学校评估器 - 这个学校值得上吗？",
+    "description": "比较学校录取通知书，评估一所学校是否值得就读，基于各种因素进行分析。"
   },
   "schoolEvaluator": {
-    "title": "学校录取评估器",
-    "description": "输入最多两份学校录取通知书的详细信息，进行比较并确定哪个更适合您。",
+    "title": "学校录取通知书评估器",
+    "description": "输入最多两所学校的录取通知书详情进行比较，确定哪一个更适合你。",
     "schoolName": "学校名称",
-    "tuition": "每年学费（美元）",
-    "scholarship": "每年奖学金（美元）",
-    "livingCost": "每年生活费（美元）",
-    "programLength": "项目时长（年）",
+    "tuition": "年学费（美元）",
+    "scholarship": "年奖学金（美元）",
+    "livingCost": "年生活费（美元）",
+    "programLength": "课程长度（年）",
     "postGradSalary": "预期毕业后薪资（美元/年）",
     "reputation": "学校声誉（1-10）",
     "location": "地理位置偏好（1-10）",
-    "programFit": "项目匹配度（1-10）",
+    "programFit": "课程匹配度（1-10）",
     "calculate": "计算比较结果",
     "netCost": "净成本",
-    "estimatedROI": "预估投资回报率（5年）",
-    "weightedScore": "加权分数",
+    "estimatedROI": "预期投资回报率（5年）",
+    "weightedScore": "加权得分",
     "school1": "学校1",
     "school2": "学校2",
     "comparisonResults": "比较结果"
