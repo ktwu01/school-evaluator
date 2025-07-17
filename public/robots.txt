@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ktwu01.github.io/school-evaluator/sitemap.xml
