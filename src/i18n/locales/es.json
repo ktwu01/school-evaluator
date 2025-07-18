@@ -34,6 +34,7 @@
     "betterFinancially": "Mejor Valor Financiero",
     "betterOverall": "Mejor Ajuste General",
     "totalProgramCost": "Costo Total del Programa",
+    "metric": "Métrica",
     "validation": {
       "nameRequired": "El nombre de la escuela es obligatorio",
       "minValue": "El valor debe ser al menos {{min}}",

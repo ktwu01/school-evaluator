@@ -34,6 +34,7 @@
     "betterFinancially": "Better Financial Value",
     "betterOverall": "Better Overall Fit",
     "totalProgramCost": "Total Program Cost",
+    "metric": "Metric",
     "validation": {
       "nameRequired": "School name is required",
       "minValue": "Value must be at least {{min}}",
