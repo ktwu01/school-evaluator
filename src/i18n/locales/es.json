@@ -26,6 +26,24 @@
     "weightedScore": "Puntuación Ponderada",
     "school1": "Escuela 1",
     "school2": "Escuela 2",
-    "comparisonResults": "Resultados de Comparación"
+    "comparisonResults": "Resultados de Comparación",
+    "preferences": "Tus Preferencias",
+    "reset": "Reiniciar",
+    "clear": "Borrar Todo",
+    "recommendation": "Recomendación",
+    "betterFinancially": "Mejor Valor Financiero",
+    "betterOverall": "Mejor Ajuste General",
+    "totalProgramCost": "Costo Total del Programa",
+    "validation": {
+      "nameRequired": "El nombre de la escuela es obligatorio",
+      "minValue": "El valor debe ser al menos {{min}}",
+      "maxValue": "El valor no puede exceder {{max}}",
+      "invalidNumber": "Por favor ingrese un número válido"
+    },
+    "tooltips": {
+      "reputation": "Califica la reputación general y el prestigio de la escuela",
+      "location": "Califica qué tan bien la ubicación de la escuela cumple con tus preferencias",
+      "programFit": "Califica qué tan bien el programa se alinea con tus objetivos profesionales"
+    }
   }
 } 

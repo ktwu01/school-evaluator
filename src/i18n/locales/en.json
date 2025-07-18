@@ -26,6 +26,24 @@
     "weightedScore": "Weighted Score",
     "school1": "School 1",
     "school2": "School 2",
-    "comparisonResults": "Comparison Results"
+    "comparisonResults": "Comparison Results",
+    "preferences": "Your Preferences",
+    "reset": "Reset",
+    "clear": "Clear All",
+    "recommendation": "Recommendation",
+    "betterFinancially": "Better Financial Value",
+    "betterOverall": "Better Overall Fit",
+    "totalProgramCost": "Total Program Cost",
+    "validation": {
+      "nameRequired": "School name is required",
+      "minValue": "Value must be at least {{min}}",
+      "maxValue": "Value cannot exceed {{max}}",
+      "invalidNumber": "Please enter a valid number"
+    },
+    "tooltips": {
+      "reputation": "Rate the school's overall reputation and prestige",
+      "location": "Rate how well the school's location meets your preferences",
+      "programFit": "Rate how well the program aligns with your career goals"
+    }
   }
 }
