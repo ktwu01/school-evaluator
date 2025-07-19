@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import SchoolInputForm from "@/components/SchoolInputForm";
 import ComparisonResults from "@/components/ComparisonResults";
