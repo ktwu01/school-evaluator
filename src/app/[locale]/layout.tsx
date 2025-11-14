@@ -10,6 +10,12 @@ import { getTranslations } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const dynamic = 'force-static';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

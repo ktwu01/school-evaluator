@@ -1,8 +1,22 @@
 import { useState, useEffect, useCallback } from 'react';
 
+function getInitialValue<T>(key: string, initialValue: T): T {
+  if (typeof window === 'undefined') {
+    return initialValue;
+  }
+
+  try {
+    const item = window.localStorage.getItem(key);
+    return item ? JSON.parse(item) : initialValue;
+  } catch (error) {
+    console.warn(`Error reading localStorage key "${key}":`, error);
+    return initialValue;
+  }
+}
+
 export const useLocalStorage = <T>(key: string, initialValue: T): [T, (value: T) => void, () => void] => {
-  // State to store our value
-  const [storedValue, setStoredValue] = useState<T>(initialValue);
+  // State to store our value - initialize from localStorage if available
+  const [storedValue, setStoredValue] = useState<T>(() => getInitialValue(key, initialValue));
 
   // Return a wrapped version of useState's setter function that persists the new value to localStorage
   const setValue = useCallback((value: T) => {
@@ -32,23 +46,6 @@ export const useLocalStorage = <T>(key: string, initialValue: T): [T, (value: T)
       }
     } catch (error) {
       console.warn(`Error clearing localStorage key "${key}":`, error);
-    }
-  }, [key, initialValue]);
-
-  // Get from local storage on mount
-  useEffect(() => {
-    try {
-      if (typeof window !== 'undefined') {
-        const item = window.localStorage.getItem(key);
-        if (item) {
-          const parsedItem = JSON.parse(item);
-          setStoredValue(parsedItem);
-        }
-      }
-    } catch (error) {
-      // If error, just use initial value
-      console.warn(`Error reading localStorage key "${key}":`, error);
-      setStoredValue(initialValue);
     }
   }, [key, initialValue]);
 

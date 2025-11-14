@@ -41,9 +41,9 @@ const SchoolInputForm: React.FC<SchoolInputFormProps> = ({
       const value = data[key as keyof SchoolData] as number;
       
       if (value < rules.min) {
-        newErrors[key] = t('validation.minValue', { min: rules.min });
+        newErrors[key] = t('validation.minValue').replace('{min}', String(rules.min));
       } else if (value > rules.max) {
-        newErrors[key] = t('validation.maxValue', { max: rules.max });
+        newErrors[key] = t('validation.maxValue').replace('{max}', String(rules.max));
       }
     });
 
@@ -53,20 +53,20 @@ const SchoolInputForm: React.FC<SchoolInputFormProps> = ({
 
   const handleInputChange = (field: keyof SchoolData, value: string | number) => {
     const newData = { ...schoolData };
-    
+
     if (typeof value === 'string' && typeof newData[field] === 'number') {
       // Convert string to number for numeric fields
-      newData[field] = value === '' ? 0 : parseFloat(value);
+      (newData[field] as number) = value === '' ? 0 : parseFloat(value);
     } else {
-      newData[field] = value;
+      (newData[field] as any) = value;
     }
-    
+
     onChange(newData);
   };
 
   const handleSliderChange = (field: keyof SchoolData, value: number[]) => {
     const newData = { ...schoolData };
-    newData[field] = value[0];
+    (newData[field] as number) = value[0];
     onChange(newData);
   };
 

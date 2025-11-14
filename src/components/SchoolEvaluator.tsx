@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import SchoolInputForm from "@/components/SchoolInputForm";
 import ComparisonResults from "@/components/ComparisonResults";
 import { Button } from "@/components/ui/button";
@@ -8,11 +9,8 @@ import { SchoolData, ComparisonResult, INITIAL_SCHOOL_DATA } from "@/types/schoo
 import { useSchoolCalculations } from "@/hooks/useSchoolCalculations";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 
-interface SchoolEvaluatorProps {
-  t: (key: string) => string; // Translation function
-}
-
-const SchoolEvaluator: React.FC<SchoolEvaluatorProps> = ({ t }) => {
+const SchoolEvaluator: React.FC = () => {
+  const t = useTranslations("schoolEvaluator");
   // Use localStorage for persistence
   const [school1Data, setSchool1Data, clearSchool1] = useLocalStorage<SchoolData>(
     "schoolEvaluator_school1",
