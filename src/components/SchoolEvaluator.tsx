@@ -150,28 +150,12 @@ const SchoolEvaluator: React.FC = () => {
           </Button>
         </div>
       </div>
-      <p className="text-center mb-8">
+      <p className="text-center mb-4">
         {t('description')}
       </p>
 
-      {/* School input forms */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <SchoolInputForm
-          schoolData={school1Data}
-          onChange={handleSchool1Change}
-          title={t('school1')}
-          t={t}
-        />
-        <SchoolInputForm
-          schoolData={school2Data}
-          onChange={handleSchool2Change}
-          title={t('school2')}
-          t={t}
-        />
-      </div>
-
       {/* Action buttons */}
-      <div className="mt-6 flex justify-center gap-4">
+      <div className="mb-6 flex justify-center gap-4">
         <Button
           onClick={importComparison}
           variant="outline"
@@ -192,6 +176,22 @@ const SchoolEvaluator: React.FC = () => {
         >
           {t('reset')}
         </Button>
+      </div>
+
+      {/* School input forms */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <SchoolInputForm
+          schoolData={school1Data}
+          onChange={handleSchool1Change}
+          title={t('school1')}
+          t={t}
+        />
+        <SchoolInputForm
+          schoolData={school2Data}
+          onChange={handleSchool2Change}
+          title={t('school2')}
+          t={t}
+        />
       </div>
 
       {/* Comparison results */}
